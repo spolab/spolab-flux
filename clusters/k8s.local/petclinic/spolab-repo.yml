@@ -6,5 +6,3 @@ metadata:
 spec:
   interval: 10s
   url: https://github.com/spolab/petclinic
-  ref:
-    branch: master
