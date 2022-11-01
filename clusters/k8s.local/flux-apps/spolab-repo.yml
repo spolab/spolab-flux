@@ -8,3 +8,6 @@ spec:
   url: ssh://git@github.com/spolab/spolab-flux
   ref:
     branch: master
+  secretRef:
+    name: flux-system    
+    namespace: flux-system
