@@ -5,7 +5,7 @@ metadata:
   namespace: flux-apps
 spec:
   interval: 10s
-  url: ssh://git@github.com/spolab/spolab-flux
+  url: https://github.com/spolab/spolab-flux
   ref:
     branch: master
   secretRef:
