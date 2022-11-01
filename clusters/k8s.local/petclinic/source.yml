@@ -5,4 +5,7 @@ metadata:
   namespace: petclinic
 spec:
   interval: 10s
-  url: https://github.com/spolab/petclinic
+  url: ssh://git@github.com/spolab/petclinic
+  secretRef:
+    name: petclinic-source
+    namespace: petclinic
