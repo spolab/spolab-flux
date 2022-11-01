@@ -1,10 +1,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: petclinic-owner
+  name: petclinic
   namespace: petclinic
 spec:
   interval: 10s
-  url: https://github.com/spolab/petclinic-owner/flux
+  url: https://github.com/spolab/petclinic/flux
   ref:
     branch: master
