@@ -2,7 +2,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: petclinic-owner
-  namespace: flux-apps
+  namespace: petclinic
 spec:
   sourceRef:
     kind: GitRepository
@@ -10,4 +10,4 @@ spec:
     namespace: petclinic
   interval: 10s
   prune: true
-  path: flux
+  path: ./flux
