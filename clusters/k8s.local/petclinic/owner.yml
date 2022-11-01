@@ -6,8 +6,8 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: spolab-repo
-    namespace: flux-apps
+    name: petclinic
+    namespace: petclinic
   interval: 10s
   prune: true
-  path: ./apps/petclinic
+  path: flux
