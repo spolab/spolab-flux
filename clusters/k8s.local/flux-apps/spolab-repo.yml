@@ -1,10 +1,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: petclinic
-  namespace: petclinic
+  name: spolab-repo
+  namespace: flux-apps
 spec:
   interval: 10s
-  url: https://github.com/spolab/petclinic/flux
+  url: https://github.com/spolab/spolab-flux
   ref:
     branch: master

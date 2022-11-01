@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petclinic-owner
+spec:
+  selector:
+    matchLabels:
+      app: petclinic-owner
+  template:
+    metadata:
+      labels:
+        app: petclinic-owner
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: petclinic-owner
+        dapr.io/app-port: "3000"
+    spec:
+      containers:
+      - name: petclinic-owner
+        image: spolab/petclinc-owner:v0.0.2
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: petclinic-owner
+spec:
+  selector:
+    app: petclinic-owner
+  ports:
+  - port: 3000
+    targetPort: 3000
