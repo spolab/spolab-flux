@@ -8,4 +8,3 @@ spec:
   url: https://github.com/spolab/petclinic
   secretRef:
     name: petclinic-source
-    namespace: petclinic
