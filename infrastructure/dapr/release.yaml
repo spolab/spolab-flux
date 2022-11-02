@@ -11,5 +11,7 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         name: dapr
+        kind: HelmRepository
+        namespace: flux-system
       version: "1.9.2"
   interval: 60m
