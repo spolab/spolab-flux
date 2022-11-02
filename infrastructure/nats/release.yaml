@@ -4,7 +4,7 @@ metadata:
   name: dapr
   namespace: nats-system
 spec:
-  releaseName: dapr
+  releaseName: default
   chart:
     spec:
       chart: nats
