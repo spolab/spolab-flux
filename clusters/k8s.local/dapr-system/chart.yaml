@@ -21,5 +21,5 @@ spec:
   sourceRef:
     kind: HelmRepository
     name: dapr
-  valueFiles:
+  valuesFiles:
     - values.yaml
