@@ -1,5 +1,0 @@
-cluster:
-  enabled: false
-
-jetstream:
-  enabled: true

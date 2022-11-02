@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: dapr
+spec:
+  releaseName: dapr
+  chart:
+    spec:
+      chart: dapr
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        name: dapr
+      version: "1.9.2"
+  interval: 60m
