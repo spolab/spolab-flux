@@ -6,9 +6,9 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: petclinic
-    namespace: petclinic
+    name: flux-system
+    namespace: flux-system
   interval: 10s
   prune: false
-  path: ./flux
+  path: ./apps/petclinic
   targetNamespace: petclinic

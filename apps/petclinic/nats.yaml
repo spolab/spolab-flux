@@ -1,0 +1,22 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: nats
+spec:
+  interval: 5m0s
+  url: https://nats-io.github.io/k8s/helm/charts/
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmChart
+metadata:
+  name: nats
+spec:
+  interval: 5m0s
+  chart: nats
+  reconcileStrategy: ChartVersion
+  version: "0.18.2"
+  sourceRef:
+    kind: HelmRepository
+    name: nats
+  valueFiles:
+    - nats-values.yaml

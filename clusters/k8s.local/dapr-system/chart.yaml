@@ -1,0 +1,25 @@
+# https://dapr.github.io/helm-charts/
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: dapr
+  namespace: dapr-system
+spec:
+  interval: 5m0s
+  url: https://dapr.github.io/helm-charts/
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmChart
+metadata:
+  name: dapr
+  namespace: dapr-system
+spec:
+  interval: 5m0s
+  chart: nats
+  reconcileStrategy: ChartVersion
+  version: "1.9.2"
+  sourceRef:
+    kind: HelmRepository
+    name: dapr
+  valueFiles:
+    - values.yaml
