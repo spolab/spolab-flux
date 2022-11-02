@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: dapr
+  namespace: nats-system
+spec:
+  releaseName: dapr
+  chart:
+    spec:
+      chart: nats
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        name: nats
+        kind: HelmRepository
+        namespace: flux-system
+      version: "0.18.2"
+  interval: 60m
