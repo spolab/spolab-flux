@@ -11,6 +11,4 @@ spec:
   interval: 10s
   prune: false
   path: ./flux
-  patches:
-    - metadata:
-        namespace: petclinic
+  targetNamespace: petclinic
