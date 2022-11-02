@@ -6,5 +6,7 @@ metadata:
 spec:
   interval: 10s
   url: https://github.com/spolab/petclinic
+  ref:
+    branch: main
   secretRef:
     name: petclinic-source
