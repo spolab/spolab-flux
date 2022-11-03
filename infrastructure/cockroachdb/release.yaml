@@ -26,6 +26,6 @@ metadata:
   namespace: cockroachdb
 data:
   values.yaml: |
-    statefulset:
-      replicas: 1
+    conf:
+      single-node: true
 
