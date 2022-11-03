@@ -7,7 +7,7 @@ spec:
   releaseName: dapr
   chart:
     spec:
-      chart: dapr
+      chart: crossplane
       reconcileStrategy: ChartVersion
       sourceRef:
         name: crossplane-stable
