@@ -36,3 +36,4 @@ spec:
     app: petclinic-owner
   ports:
   - port: 3000
+---
