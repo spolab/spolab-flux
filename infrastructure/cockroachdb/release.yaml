@@ -28,4 +28,6 @@ data:
   values.yaml: |
     conf:
       single-node: true
+    statefulset: 
+      replicas: 1
 
