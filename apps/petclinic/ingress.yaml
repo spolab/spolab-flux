@@ -23,6 +23,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: petclinic-owner
+            name: petclinic-owner-dapr
             port: 
-              number: 3000
+              name: dapr-http
+              number: 80
