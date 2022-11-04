@@ -13,13 +13,6 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/owner"
-        backend:
-          service:
-            name: petclinic-owner
-            port: 
-              number: 3000
-      - pathType: Prefix
         path: "/"
         backend:
           service:
