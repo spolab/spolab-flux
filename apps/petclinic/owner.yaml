@@ -15,6 +15,7 @@ spec:
         dapr.io/enabled: "true"
         dapr.io/app-id: petclinic-owner
         dapr.io/app-port: "3000"
+        dapr.io/log-level: debug
     spec:
       containers:
       - name: petclinic-owner
