@@ -16,6 +16,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: petclinic-owner-dapr
+            name: owner-dapr
             port: 
               number: 80
