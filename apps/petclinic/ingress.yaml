@@ -4,7 +4,7 @@ metadata:
   name: petclinic
   namespace: petclinic
   labels:
-    name: petclinic
+    app: petclinic
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
 spec:
