@@ -7,6 +7,7 @@ metadata:
     name: petclinic
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
+    dapr.io/enabled: "true"
 spec:
   rules:
   - host: petclinic.127.0.0.1.nip.io
