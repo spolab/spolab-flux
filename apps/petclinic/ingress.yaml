@@ -18,4 +18,4 @@ spec:
           service:
             name: owner-dapr
             port: 
-              name: owner-dapr
+              name: dapr-http
