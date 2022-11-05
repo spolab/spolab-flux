@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: petclinic-owner
+  name: owner
   namespace: petclinic
 spec:
   selector:
     matchLabels:
-      app: petclinic-owner
+      app: owner
   template:
     metadata:
       labels:
-        app: petclinic-owner
+        app: owner
       annotations:
         dapr.io/enabled: "true"
-        dapr.io/app-id: petclinic-owner
+        dapr.io/app-id: owner
         dapr.io/app-port: "3000"
         dapr.io/log-level: debug
     spec:
