@@ -18,4 +18,4 @@ spec:
           service:
             name: petclinic-owner-dapr
             port: 
-              name: dapr-http
+              number: 80
