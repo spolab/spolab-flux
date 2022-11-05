@@ -14,7 +14,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/owner"
+        path: "/"
         backend:
           service:
             name: petclinic-owner-dapr
