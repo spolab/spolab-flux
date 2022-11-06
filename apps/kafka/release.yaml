@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: default
+  namespace: kafka
+spec:
+  releaseName: default
+  chart:
+    spec:
+      chart: cp-helm-charts
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        name: confluentinc
+        kind: HelmRepository
+        namespace: flux-system
+      version: "0.6.1"
+  interval: 60m

@@ -1,0 +1,9 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: petclinic
+  namespace: petclinic
+spec:
+  type: pubsub.jetstream
+  version: v1
+  
