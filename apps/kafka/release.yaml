@@ -21,21 +21,9 @@ spec:
 ---
 apiVersion: v1
 kind: ConfigMap
-metadata:
+metadata: 
   name: kafka
   namespace: kafka
 data:
   values.yaml: |
     brokers: 1
-    cp-schema-registry:
-      enabled: false
-    cp-kafka-rest:
-      enabled: false
-    cp-kafka-connect:
-      enabled: false
-    cp-kafka-rest:
-      enabled: false
-    cp-ksql-server:
-      enabled: false
-    cp-control-center:
-      enabled: false

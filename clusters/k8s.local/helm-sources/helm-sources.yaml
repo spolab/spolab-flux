@@ -5,10 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10s
-  path: ./apps/petclinic
+  path: ./infrastructure/helm-sources
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
-  dependsOn:
-    - helm-sources
