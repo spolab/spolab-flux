@@ -33,3 +33,7 @@ data:
       enabled: false
     cp-kafka-connect:
       enabled: false
+    cp-kafka-rest:
+      enabled: false
+    cp-ksql-server:
+      enabled: false
