@@ -37,3 +37,5 @@ data:
       enabled: false
     cp-ksql-server:
       enabled: false
+    cp-control-center:
+      enabled: false
