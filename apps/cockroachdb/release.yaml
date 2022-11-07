@@ -30,6 +30,3 @@ data:
       single-node: true
     statefulset: 
       replicas: 1
-    tls:
-      enabled: false
-
