@@ -1,0 +1,17 @@
+---
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: kafka-pubsub
+spec:
+  type: pubsub.kafka
+  version: v1
+  metadata:
+  - name: brokers # Required. Kafka broker connection setting
+    value: "kafka.kafka.svc.cluster.local:9092"
+  - name: consumerGroup # Optional. Used for input bindings.
+    value: "petclinic-owner"
+  - name: clientID # Optional. Used as client tracing ID by Kafka brokers.
+    value: "petclinic-owner"
+  - name: authType # Required.
+    value: "none"

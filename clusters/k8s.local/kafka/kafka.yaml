@@ -11,4 +11,4 @@ spec:
     kind: GitRepository
     name: flux-system
   dependsOn:
-    - name: helm-sources        
+    - name: helm-sources
