@@ -26,6 +26,7 @@ metadata:
   namespace: kafka
 data:
   values.yaml: |
+    brokers: 1
     cp-schema-registry:
       enabled: false
     cp-kafka-rest:
