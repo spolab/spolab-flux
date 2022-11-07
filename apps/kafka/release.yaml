@@ -7,13 +7,13 @@ spec:
   releaseName: kafka
   chart:
     spec:
-      chart: cp-helm-charts
+      chart: kafka
       reconcileStrategy: ChartVersion
       sourceRef:
-        name: confluentinc
+        name: bitnami
         kind: HelmRepository
         namespace: flux-system
-      version: "0.6.1"
+      version: "19.1.0"
   interval: 60m
   valuesFrom:
     - kind: ConfigMap

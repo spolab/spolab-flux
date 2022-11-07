@@ -1,8 +1,9 @@
+# https://charts.bitnami.com/bitnami
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: confluentinc
+  name: bitnami
   namespace: flux-system
 spec:
   interval: 5m0s
-  url: https://confluentinc.github.io/cp-helm-charts/
+  url: https://charts.bitnami.com/bitnami
