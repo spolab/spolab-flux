@@ -15,3 +15,20 @@ spec:
         namespace: flux-system
       version: "0.6.1"
   interval: 60m
+  valuesFrom:
+    - kind: ConfigMap
+      name: kafka
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kafka
+  namespace: kafka
+data:
+  values.yaml: |
+    cp-schema-registry:
+      enabled: false
+    cp-kafka-rest:
+      enabled: false
+    cp-kafka-connect:
+      enabled: false
