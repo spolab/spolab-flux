@@ -58,3 +58,5 @@ spec:
   metadata:
   - name: connectionString
     value: "host=cockroachdb.cockroachdb.svc.cluster.local user=root port=26257 connect_timeout=10 database=petclinic-owner"
+  - name: actorStateStore
+    value: true
