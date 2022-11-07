@@ -4,7 +4,7 @@ metadata:
   name: default
   namespace: kafka
 spec:
-  releaseName: default
+  releaseName: kafka
   chart:
     spec:
       chart: cp-helm-charts
