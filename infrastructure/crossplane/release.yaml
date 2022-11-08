@@ -17,10 +17,10 @@ spec:
       version: "1.10.1"
   interval: 60m
 ---
-apiVersion: packages.crossplane.io/v1alpha1
-kind: ClusterPackageInstall
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
 metadata:
-  name: provider-aws
-  namespace: crossplane-system
+ name: provider-aws
+ namespace: crossplane-system
 spec:
-  package: "crossplane/provider-aws:master"
+ package: xpkg.upbound.io/crossplane/provider-aws:v0.33.0
