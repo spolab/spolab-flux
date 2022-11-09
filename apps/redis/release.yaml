@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: redis
+  namespace: redis
+spec:
+  releaseName: redis
+  chart:
+    spec:
+      chart: redis
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        name: bitnami
+        kind: HelmRepository
+        namespace: flux-system
+      version: "17.3.8s"
+  interval: 1m
