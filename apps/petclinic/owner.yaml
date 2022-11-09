@@ -57,6 +57,6 @@ spec:
   version: v1
   metadata:
   - name: redisHost
-    value: redis-master.redis.svc.cluster.local
+    value: redis-master.redis.svc.cluster.local:6379
   - name: actorStateStore
     value: true
