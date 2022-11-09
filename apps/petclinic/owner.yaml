@@ -53,10 +53,10 @@ metadata:
   name: owner-database
   namespace: petclinic
 spec:
-  type: state.cockroachdb
+  type: state.redis
   version: v1
   metadata:
-  - name: connectionString
-    value: "host=cockroachdb.cockroachdb.svc.cluster.local user=root port=26257 connect_timeout=10 database=petclinic-owner sslmode=prefer"
+  - name: redisHost
+    value: redis-master.redis.svc.cluster.local
   - name: actorStateStore
     value: true
