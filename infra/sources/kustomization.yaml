@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - bitnami.yaml
+  - dapr.yaml
   - nats.yaml
   - cockroachdb.yaml
   - nginx.yaml
