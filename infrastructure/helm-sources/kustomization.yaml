@@ -2,8 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: redis
 resources:
-  - bitnami
-  - redis
-  - nats
-  - cockroachdb
-  - nginx
+  - ./bitnami.yaml
+  - ./redis.yaml
+  - ./nats.yaml
+  - ./cockroachdb.yaml
+  - ./nginx.yaml
