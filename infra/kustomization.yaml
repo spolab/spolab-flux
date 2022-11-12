@@ -4,5 +4,5 @@ resources:
   - sources
   - dapr
   - nginx
-  - crossplane
+#  - crossplane
   - kafka
