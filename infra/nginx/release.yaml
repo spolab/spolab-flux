@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: nginx
-  namespace: nginx-system
 spec:
   releaseName: default
   chart:
@@ -18,15 +17,3 @@ spec:
   valuesFrom:
   - kind: ConfigMap
     name: nginx
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: nginx
-  namespace: nginx-system
-data:
-  values.yaml: |
-    annotations:
-      dapr.io/enabled: "true"
-      dapr.io/app-id: nginx
-      dapr.io/app-port: "80"

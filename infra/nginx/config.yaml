@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx
+data:
+  values.yaml: |
+    annotations:
+      dapr.io/enabled: "true"
+      dapr.io/app-id: nginx
+      dapr.io/app-port: "80"
