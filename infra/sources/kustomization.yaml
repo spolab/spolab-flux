@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: redis
 resources:
   - bitnami.yaml
-  - redis.yaml
   - nats.yaml
   - cockroachdb.yaml
   - nginx.yaml
