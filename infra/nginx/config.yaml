@@ -11,4 +11,4 @@ data:
           dapr.io/app-id: nginx
           dapr.io/app-port: "80"
       service:
-        targetPort: nginx-dapr
+        targetPort: 3500
