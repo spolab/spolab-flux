@@ -14,7 +14,6 @@ spec:
             dapr.io/app-id: traefik
             dapr.io/app-port: "80"                
       target:
-        apiVersion: v1
         kind: Service
         name: traefik
         namespace: kube-system
