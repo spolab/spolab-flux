@@ -5,6 +5,10 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  prune: true
   patches:
     - patch: |
         - op: add
