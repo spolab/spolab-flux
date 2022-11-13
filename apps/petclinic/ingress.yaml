@@ -5,9 +5,9 @@ metadata:
   labels:
     app: petclinic
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx
   rules:
   - host: petclinic.127.0.0.1.nip.io
     http:
