@@ -1,8 +1,8 @@
 # --------------------------------------------------------------------------------------------------------------------------------------
 # To understand the syntax of this patch, please consult https://fluxcd.io/flux/faq/#how-to-patch-coredns-and-other-pre-installed-addons
 # --------------------------------------------------------------------------------------------------------------------------------------
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: traefik
   namespace: kube-system 
