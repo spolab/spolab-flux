@@ -5,4 +5,4 @@ resources:
   - dapr
   - redis
   - kafka
-  - traefik-patch
+  - nginx
