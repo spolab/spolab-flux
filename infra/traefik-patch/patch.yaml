@@ -12,3 +12,11 @@ metadata:
     dapr.io/enabled: "true"
     dapr.io/app-id: traefik
     dapr.io/app-port: "80"
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: traefik
+      app.kubernetes.io/name: traefik
+
+      
+    
