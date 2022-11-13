@@ -5,7 +5,7 @@ metadata:
 data:
   values.yaml: |
     controller:
-      config:
+      pod:
         annotations:
           dapr.io/enabled: "true"
           dapr.io/app-id: nginx
