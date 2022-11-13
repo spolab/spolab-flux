@@ -1,5 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: nginx-system
 resources:
-  - ../../infra
-  - ../../apps
+  - namespace.yaml
+  - owner.yaml
+  - ingress.yaml
