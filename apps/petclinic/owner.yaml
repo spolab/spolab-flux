@@ -25,6 +25,13 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        env:
+          - name: STATESTORE_NAME
+            value: owner-state
+          - name: PUBSUB_NAME
+            value: owner-pubsub
+          - name: PUBSUB_TOPIC
+            value: owner
         ports:
         - name: rest
           containerPort: 3000
