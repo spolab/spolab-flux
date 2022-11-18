@@ -62,6 +62,6 @@ spec:
   version: v1
   metadata:
   - name: host
-    value: mongodb-mongodb.mongodb.svc.cluster.local:27017
+    value: mongodb.mongodb.svc.cluster.local:27017
   - name: actorStateStore
     value: true
