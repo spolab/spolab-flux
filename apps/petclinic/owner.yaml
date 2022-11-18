@@ -61,7 +61,7 @@ spec:
   type: state.mongodb
   version: v1
   metadata:
-  - name: redisHost
-    value: redis-master.redis.svc.cluster.local:6379
+  - name: host
+    value: mongodb-mongodb.mongodb.svc.cluster.local:27017
   - name: actorStateStore
     value: true
