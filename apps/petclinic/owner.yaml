@@ -58,7 +58,7 @@ kind: Component
 metadata:
   name: owner-state
 spec:
-  type: state.redis
+  type: state.mongodb
   version: v1
   metadata:
   - name: redisHost

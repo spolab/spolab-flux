@@ -1,27 +1,30 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: redis
+  name: mongodb
 spec:
-  releaseName: redis
+  releaseName: mongodb
   chart:
     spec:
-      chart: redis
+      chart: mongodb
       reconcileStrategy: ChartVersion
       sourceRef:
         name: bitnami
         kind: HelmRepository
         namespace: flux-system
-      version: "17.3.8"
+      version: "13.4.1"
   interval: 1m
   valuesFrom:
   - kind: ConfigMap
-    name: redis
+    name: mongodb
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: redis
+  name: mongodb
 data:
   values.yaml: |
-    architecture: standalone  
+    replica:
+      replicaCount: 0
+    auth:
+      enabled: false      
