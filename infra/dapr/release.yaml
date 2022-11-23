@@ -12,5 +12,5 @@ spec:
         name: dapr
         kind: HelmRepository
         namespace: flux-system
-      version: "1.9.3"
+      version: "1.9.2"
   interval: 60m
