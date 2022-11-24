@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: tempo
+spec:
+  releaseName: tempo
+  chart:
+    spec:
+      chart: tempo
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        name: grafana
+        kind: HelmRepository
+        namespace: flux-system
+      version: "0.16.6"
+  interval: 1m
+  valuesFrom:
+  - kind: ConfigMap
+    name: tempo
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tempo
+data:
+  values.yaml: |
+    architecture: standalone  
