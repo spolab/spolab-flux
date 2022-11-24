@@ -24,4 +24,5 @@ metadata:
   name: tempo
 data:
   values.yaml: |
-    architecture: standalone  
+    architecture: standalone
+    
