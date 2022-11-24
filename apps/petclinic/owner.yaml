@@ -41,30 +41,20 @@ kind: Component
 metadata:
   name: owner-pubsub
 spec:
-  type: pubsub.kafka
+  type: pubsub.in-memory
   version: v1
-  metadata:
-  - name: brokers # Required. Kafka broker connection setting
-    value: "kafka.kafka.svc.cluster.local:9092"
-  - name: consumerGroup # Optional. Used for input bindings.
-    value: "petclinic-owner"
-  - name: clientID # Optional. Used as client tracing ID by Kafka brokers.
-    value: "petclinic-owner"
-  - name: authType # Required.
-    value: "none"
+  metadata: []
 ---
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
   name: owner-state
 spec:
-  type: state.mongodb
+  type: state.in-memory
   version: v1
   metadata:
-  - name: host
-    value: mongodb.mongodb.svc.cluster.local:27017
-  - name: actorStateStore
-    value: true
+    - name: actorStateStore
+      value: true
 ---
 apiVersion: dapr.io/v1alpha1
 kind: Subscription
