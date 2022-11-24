@@ -5,3 +5,4 @@ resources:
   - bitnami.yaml
   - dapr.yaml
   - nginx.yaml
+  - grafana.yaml
