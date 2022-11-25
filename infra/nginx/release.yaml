@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         namespace: flux-system
       version: "0.15.1"
-  interval: 1m
+  interval: 30s
   valuesFrom:
   - kind: ConfigMap
     name: nginx
