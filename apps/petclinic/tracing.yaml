@@ -5,5 +5,7 @@ metadata:
 spec:
   tracing:
     samplingRate: "1"
-    zipkin:
-      endpointAddress: "http://tempo.tempo.svc.cluster.local:9411/api/v2/spans"
+    otel:
+      endpointAddress: "tempo.tempo:4317"
+      isSecure: false
+      protocol: grpc 
