@@ -18,4 +18,5 @@ spec:
           service:
             name: tempo
             port: 
-              name: tempo-query-jaeger-ui
+              # name: tempo-query-jaeger-ui
+              number: 16686
