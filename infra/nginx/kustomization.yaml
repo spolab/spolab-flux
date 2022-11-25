@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: nginx-system
 resources:
   - namespace.yaml
+  - tracing.yaml
   - config.yaml
   - release.yaml

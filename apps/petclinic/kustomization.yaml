@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: petclinic
 resources:
   - namespace.yaml
-  - configuration.yaml
+  - tracing.yaml
   - owner.yaml
   - ingress.yaml
