@@ -10,3 +10,4 @@ data:
           dapr.io/enabled: "true"
           dapr.io/app-id: nginx
           dapr.io/app-port: "80"
+          dapr.io/config: "tracing"
