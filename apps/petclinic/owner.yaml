@@ -17,6 +17,8 @@ spec:
         dapr.io/app-port: "3000"
         dapr.io/log-level: debug
         dapr.io/sidecar-listen-addresses: "[::],0.0.0.0"
+        dapr.io/config: "tracing"
+
     spec:
       containers:
       - name: petclinic-owner
