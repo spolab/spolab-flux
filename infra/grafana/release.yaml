@@ -14,15 +14,15 @@ spec:
         namespace: flux-system
       version: "6.44.8"
   interval: 1m
-  valuesFrom:
-    - kind: ConfigMap
-      name: grafana
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: grafana
-data:
-  values.yaml: |
-    persistence:
-      enabled: false
+#   valuesFrom:
+#     - kind: ConfigMap
+#       name: grafana
+# ---
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: grafana
+# data:
+#   values.yaml: |
+#     persistence:
+#       enabled: false
