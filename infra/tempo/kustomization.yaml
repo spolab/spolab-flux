@@ -4,4 +4,3 @@ namespace: tempo
 resources:
   - namespace.yaml
   - release.yaml
-  - jaeger-ingress.yaml
