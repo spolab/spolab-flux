@@ -6,4 +6,5 @@ resources:
   # - mongodb
   # - kafka
   - nginx
+  - grafana
   - tempo
