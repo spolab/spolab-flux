@@ -1,22 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: jaeger
+  name: grafana
   labels:
-    app: tempo
+    app: grafana
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: jaeger.127.0.0.1.nip.io
+  - host: grafana.127.0.0.1.nip.io
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: tempo
+            name: grafana
             port: 
-              # name: tempo-query-jaeger-ui
-              number: 16686
+              number: 80

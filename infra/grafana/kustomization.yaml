@@ -4,3 +4,4 @@ namespace: grafana
 resources:
   - namespace.yaml
   - release.yaml
+  - ingress.yaml
