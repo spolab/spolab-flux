@@ -3,9 +3,10 @@ kind: Kustomization
 resources:
   - sources
   - dapr
-  # - mongodb
-  # - kafka
+  - keycloak
   - nginx
   - grafana
   - tempo
   - tekton
+  # - mongodb
+  # - kafka
