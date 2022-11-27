@@ -8,3 +8,4 @@ resources:
   - nginx
   - grafana
   - tempo
+  - tekton
