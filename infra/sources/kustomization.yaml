@@ -6,4 +6,3 @@ resources:
   - dapr.yaml
   - nginx.yaml
   - grafana.yaml
-  - tekton.yaml
