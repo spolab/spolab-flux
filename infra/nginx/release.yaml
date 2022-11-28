@@ -4,6 +4,8 @@ metadata:
   name: nginx
 spec:
   releaseName: default
+  dependsOn:
+    - name: dapr
   chart:
     spec:
       chart: nginx-ingress
