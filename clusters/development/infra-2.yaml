@@ -10,6 +10,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infra/others
+  path: ./infra/2
   prune: true
   wait: true
