@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: petclinic
+spec:
+  interval: 1m0s
+  url: https://github.com/spolab/petclinic
+  ref:
+    branch: master
+  
