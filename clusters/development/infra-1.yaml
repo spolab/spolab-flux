@@ -4,6 +4,8 @@ metadata:
   name: infra-1
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: infra-0
   interval: 1m0s
   sourceRef:
     kind: GitRepository
