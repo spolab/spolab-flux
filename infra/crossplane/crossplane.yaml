@@ -1,0 +1,30 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: crossplane-core
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: "./core"
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: crossplane-providers
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: "./providers"
+  prune: true
+  wait: true
+  dependsOn:
+    - name: crossplane-core
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
