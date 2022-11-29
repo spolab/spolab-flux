@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m0s
   dependsOn:
-    - name: infra-1
+    - name: infra
   sourceRef:
     kind: GitRepository
     name: flux-system
