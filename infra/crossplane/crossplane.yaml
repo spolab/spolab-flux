@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: "./core"
+  path: "./infra/crossplane/core"
   prune: true
   wait: true
   sourceRef:
@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: "./providers"
+  path: "./infra/crossplane/providers"
   prune: true
   wait: true
   dependsOn:
