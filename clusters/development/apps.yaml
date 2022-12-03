@@ -11,5 +11,5 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./apps
-  prune: true
+  prune: false
   wait: true
