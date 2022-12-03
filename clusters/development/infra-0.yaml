@@ -9,5 +9,4 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./infra/0
-  prune: true
   wait: true

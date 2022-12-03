@@ -11,5 +11,4 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./infra/1
-  prune: true
   wait: true
