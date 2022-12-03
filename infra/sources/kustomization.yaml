@@ -6,3 +6,4 @@ resources:
   - dapr.yaml
   - nginx.yaml
   - grafana.yaml
+  - crossplane.yaml
