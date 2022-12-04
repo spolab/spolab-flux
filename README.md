@@ -23,7 +23,7 @@ This repository proposes a variant to the latter approach that keeps the number 
 Bootstrap happens in the `clusters/development` folder. As you can see, there are three Kustomizations, `infra-0`, `infra-1`, and `apps`. If you open the files, you will see that `infra-1` and `apps` have a `dependsOn` clause that generate the follwoing chain of dependencies among Kustomizations:
 
 ```
-infra-0 -> infra-1 -> apps
+infra-0 <- infra-1 <- apps
 ```
 
 Think of `-0` and `-1` as something similar to runlevels. To reach a certain runlevel, you must have executed all the previous ones.
