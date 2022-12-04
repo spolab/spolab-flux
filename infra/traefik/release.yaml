@@ -28,5 +28,5 @@ data:
       podAnnotations:
         dapr.io/enabled: "true"
         dapr.io/app-id: nginx
-        dapr.io/app-port: "80"
+        dapr.io/app-port: "8000"
         dapr.io/app-health-check-path: /ping
