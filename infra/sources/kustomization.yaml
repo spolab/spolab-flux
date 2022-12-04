@@ -4,6 +4,5 @@ namespace: flux-system
 resources:
   - bitnami.yaml
   - dapr.yaml
-  - nginx.yaml
-  - grafana.yaml
   - crossplane.yaml
+  - traefik.yaml
