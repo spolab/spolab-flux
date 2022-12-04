@@ -1,12 +1,10 @@
-# SpoLab Fleet Repository
-
-This repository is a Flux fleet management tool. It demoues you to bootstrap the basic infrastructure required for the petclinic demo to work.
+# CAVEAT EMPTOR
 
 Like all other things in this repository, the goal is to provide proof-of-concept material. IT IS NOT PRODUCTION READY. USE AT YOUR OWN RISK.
 
 # What problem is this repository solving?
 
-This repository follows the classic `apps`, `infrastructure` and `clusters` structure recommended [here](https://fluxcd.io/flux/guides/repository-structure/), specifically the one repo per team model. In addition to that, we want to address how can you (more or less) elegantly solve the problem of atomic updates when a resource depends on the CRDs generated or deployed by another one. This problem is described in this [FluxCD discussion](https://github.com/fluxcd/flux2/discussions/1311). 
+This repository follows the classic `apps`, `infrastructure` and `clusters` structure recommended [here](https://fluxcd.io/flux/guides/repository-structure/), specifically the one repo per team model. In addition to that, we want to address how (more or less) to elegantly solve the problem of atomic updates when a resource depends on the CRDs generated or deployed by another one. This problem is described in this [FluxCD discussion](https://github.com/fluxcd/flux2/discussions/1311). 
 
 Assume you have two `HelmRelease`s and one generates `CRD`s that the other one depends from. At present, even a `dependsOn` clause will not work. Currently there are a number of ways you can 'work around' the problem:
 
