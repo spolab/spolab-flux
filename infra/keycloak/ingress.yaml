@@ -4,6 +4,8 @@ metadata:
   name: keycloak
   labels:
     app: keycloak
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
 spec:
   rules:
   - host: keycloak.127.0.0.1.nip.io
