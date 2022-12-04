@@ -6,13 +6,13 @@ spec:
   releaseName: traefik
   chart:
     spec:
-      chart: traefik-mesh
+      chart: traefik
       reconcileStrategy: ChartVersion
       sourceRef:
         name: traefik
         kind: HelmRepository
         namespace: flux-system
-      version: "4.1.1"
+      version: "20.5.2"
   interval: 1m
   # valuesFrom:
   # - kind: ConfigMap
