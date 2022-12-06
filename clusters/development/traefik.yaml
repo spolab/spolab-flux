@@ -11,3 +11,5 @@ spec:
   path: ./infra/traefik
   prune: true
   wait: true
+  dependsOn: 
+    - name: dapr
