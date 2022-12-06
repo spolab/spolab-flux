@@ -5,11 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  dependsOn:
-    - name: infra-2
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps
+  path: ./infra/dapr
   prune: true
   wait: true
