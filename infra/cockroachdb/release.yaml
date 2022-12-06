@@ -1,0 +1,26 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cockroachdb
+spec:
+  releaseName: cockroachdb
+  chart:
+    spec:
+      chart: cockroachdb
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        name: cockroachdb
+        kind: HelmRepository
+        namespace: flux-system
+      version: "10.0.0"
+  interval: 1m
+  valuesFrom:
+  - kind: ConfigMap
+    name: cockroachdb
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cockroachdb
+data:
+  values.yaml: ""

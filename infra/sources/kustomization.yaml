@@ -6,3 +6,4 @@ resources:
   - dapr.yaml
   - crossplane.yaml
   - traefik.yaml
+  - cockroachdb.yaml
