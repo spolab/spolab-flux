@@ -26,3 +26,5 @@ data:
   values.yaml: |
     statefulset:
       replicas: 1
+    tls:
+      enabled: false
