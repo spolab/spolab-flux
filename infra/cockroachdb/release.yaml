@@ -23,4 +23,6 @@ kind: ConfigMap
 metadata:
   name: cockroachdb
 data:
-  values.yaml: ""
+  values.yaml: |
+    statefulset:
+      replicas: 1
