@@ -4,3 +4,4 @@ namespace: petclinic
 resources:
   - namespace.yaml
   - source.yaml
+  - petclinic.yaml
