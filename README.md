@@ -18,19 +18,14 @@ Assume you have two `HelmRelease`s and one generates `CRD`s that the other one d
 
 ## Solution presented
 
-This repository proposes a variant to the latter approach that keeps the number of required kustomizations under control.
+This repository shows the latter model. After a lot of experimentation, this is the only viable model. Having distinct Kustomizations per asset provides the following advantages:
 
-Bootstrap happens in the `clusters/development` folder. As you can see, there are three Kustomizations, `infra-0`, `infra-1`, and `apps`. If you open the files, you will see that `infra-1` and `apps` have a `dependsOn` clause that generate the follwoing chain of dependencies among Kustomizations:
+ - A failed deployment does not stop other deployments
+ - It is easier to analyse the problem and find a solution
 
-```
-infra-0 <- infra-1 <- apps
-```
+The folder `clusters/development` contains a `kustomization.yaml` file that defines the Kustomizations that will be loaded.
 
-Think of `-0` and `-1` as something similar to runlevels. To reach a certain runlevel, you must have executed all the previous ones.
-
-The `infra-0` and `infra-1` Kustomizations point, respectively, to the `infra/0` and `infra/1` folders. These folders contain a file, `kustomization.yaml`, that tells FluxCD which HelmReleases need to be deployed in that "runlevel". For example, you can see that crossplane gets deployed in runlevel-0 but the AWS `Provider`, which depends on crossplane itself (`Provider` is a crossplane `CRD`), gets deployed in runlevel 1. 
-
-With the approach just described, you can limit the number of separate Kustomizations to the maximum depth of transitive dependencies between resources.
+You can see the dependency between deployments by looking at `petclinic.yaml`: it requires `traefik`, `mongodb` and `kafka` installed before it can start. 
 
 # Installation
 
