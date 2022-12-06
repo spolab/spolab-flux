@@ -3,5 +3,4 @@ kind: Kustomization
 namespace: petclinic
 resources:
   - namespace.yaml
-  - source.yaml
-  - petclinic.yaml
+  - owner.yaml
