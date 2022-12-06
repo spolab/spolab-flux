@@ -1,27 +1,32 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: redis
+  name: traefik
 spec:
-  releaseName: redis
+  releaseName: traefik
   chart:
     spec:
-      chart: redis
+      chart: traefik
       reconcileStrategy: ChartVersion
       sourceRef:
-        name: bitnami
+        name: traefik
         kind: HelmRepository
         namespace: flux-system
-      version: "17.3.14"
+      version: "20.5.2"
   interval: 1m
   valuesFrom:
   - kind: ConfigMap
-    name: redis
+    name: traefik
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: redis
+  name: traefik
 data:
   values.yaml: |
-    architecture: standalone  
+    deployment:
+      podAnnotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: traefik
+        dapr.io/app-port: "8000"
+        dapr.io/app-health-check-path: /ping

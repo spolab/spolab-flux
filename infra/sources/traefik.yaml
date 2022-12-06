@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: nginx
+  name: traefik
 spec:
   interval: 5m0s
-  url: https://helm.nginx.com/stable
+  url: https://helm.traefik.io/traefik

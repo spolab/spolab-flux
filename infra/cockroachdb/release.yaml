@@ -1,27 +1,30 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: redis
+  name: cockroachdb
 spec:
-  releaseName: redis
+  releaseName: cockroachdb
   chart:
     spec:
-      chart: redis
+      chart: cockroachdb
       reconcileStrategy: ChartVersion
       sourceRef:
-        name: bitnami
+        name: cockroachdb
         kind: HelmRepository
         namespace: flux-system
-      version: "17.3.14"
+      version: "10.0.0"
   interval: 1m
   valuesFrom:
   - kind: ConfigMap
-    name: redis
+    name: cockroachdb
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: redis
+  name: cockroachdb
 data:
   values.yaml: |
-    architecture: standalone  
+    statefulset:
+      replicas: 1
+    tls:
+      enabled: false

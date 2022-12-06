@@ -1,13 +1,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: infra-0
-  namespace: flux-system
+  name: kafka
 spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infra/0
-  prune: false  
+  path: ./infra/kafka
+  prune: true
   wait: true
