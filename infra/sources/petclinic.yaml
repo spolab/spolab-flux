@@ -6,4 +6,4 @@ spec:
   interval: 1m0s
   url: https://github.com/spolab/petclinic
   ref:
-    branch: master
+    branch: main
