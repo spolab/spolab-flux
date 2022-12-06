@@ -26,17 +26,3 @@ data:
   values.yaml: |
     statefulset:
       replicas: 1
-      customReadinessProbe:
-        httpGet:
-          path: /health
-          port: http
-          scheme: HTTPS
-        initialDelaySeconds: 30
-        periodSeconds: 5      
-      customLivenessProbe:
-        httpGet:
-          path: /health
-          port: http
-          scheme: HTTPS
-        initialDelaySeconds: 30
-        periodSeconds: 5           
