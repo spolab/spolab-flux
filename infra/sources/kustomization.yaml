@@ -7,3 +7,4 @@ resources:
   - crossplane.yaml
   - traefik.yaml
   - cockroachdb.yaml
+  - petclinic.yaml

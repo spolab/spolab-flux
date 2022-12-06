@@ -7,3 +7,4 @@ resources:
   - traefik.yaml
   - kafka.yaml
   - mongodb.yaml
+  - petclinic.yaml
