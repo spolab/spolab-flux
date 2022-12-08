@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: myapp
+  name: apisix
 data: 
   values.yaml: |
     dashboard:
