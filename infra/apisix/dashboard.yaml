@@ -3,7 +3,7 @@ kind: HelmRelease
 metadata:
   name: dashboard
 spec:
-  releaseName: apisix
+  releaseName: dashboard
   chart:
     spec:
       chart: apisix-dashboard

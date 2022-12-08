@@ -4,5 +4,5 @@ namespace: apisix
 resources:
   - namespace.yaml
   - apisix.yaml
-  # - controller.yaml
-  # - dashboard.yaml
+  - controller.yaml
+  - dashboard.yaml

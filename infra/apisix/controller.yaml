@@ -3,7 +3,7 @@ kind: HelmRelease
 metadata:
   name: controller
 spec:
-  releaseName: apisix
+  releaseName: controller
   chart:
     spec:
       chart: apisix-ingress-controller
