@@ -6,11 +6,11 @@ spec:
   releaseName: apisix
   chart:
     spec:
-      chart: apisix-ingress-controller
+      chart: apisix
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
         name: apisix
         namespace: flux-system
-      version: "0.10.1"
+      version: "0.11.3"
   interval: 1m

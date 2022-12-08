@@ -3,4 +3,6 @@ kind: Kustomization
 namespace: apisix
 resources:
   - namespace.yaml
-  - release.yaml
+  - apisix.yaml
+  - controller.yaml
+  - dashboard.yaml

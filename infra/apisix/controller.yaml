@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: controller
+spec:
+  releaseName: apisix
+  chart:
+    spec:
+      chart: apisix-ingress-controller
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: apisix
+        namespace: flux-system
+      version: "0.10.1"
+  interval: 1m
