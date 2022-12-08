@@ -7,4 +7,5 @@ resources:
   - kafka.yaml
   - mongodb.yaml
   - petclinic.yaml
+  - apisix-ingress-controller.yaml
   - apisix.yaml
