@@ -7,6 +7,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infra/apisix-ingress-controller
+  path: ./infra/apisix-ingress
   prune: true
   wait: true
