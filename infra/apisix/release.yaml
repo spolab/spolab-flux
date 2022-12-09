@@ -7,11 +7,11 @@ data:
   values.yaml: |
     gateway:
       type: LoadBalancer
-      ingress-controller:
-        enabled: true
-        config:
-          apisix:
-            serviceNamespace: apisix-system
+    ingress-controller:
+      enabled: true
+      config:
+        apisix:
+          serviceNamespace: apisix-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
