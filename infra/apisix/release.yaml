@@ -15,7 +15,7 @@ data:
     dashboard:
       enabled: true
     etcd:
-      replicaCount: 1
+      replicaCount: 3
     ingress:
       enabled: true
       hosts:
