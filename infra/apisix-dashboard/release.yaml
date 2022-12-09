@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: apisix-dashboard
+  name: apisix-dashboard-config
 data:
   values.yaml: ""
 ---
@@ -24,4 +24,4 @@ spec:
   interval: 1m
   valuesFrom:
     - kind: ConfigMap
-      name: apisix-dashboard
+      name: apisix-dashboard-config
