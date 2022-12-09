@@ -10,7 +10,7 @@ data:
       hosts:
         - host: apisix.127.0.0.1.nip.io
           paths:
-            - /*      
+            - /*
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease

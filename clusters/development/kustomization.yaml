@@ -8,5 +8,4 @@ resources:
   - mongodb.yaml
   - petclinic.yaml
   - apisix.yaml
-  - apisix-dashboard.yaml
   # - traefik.yaml
