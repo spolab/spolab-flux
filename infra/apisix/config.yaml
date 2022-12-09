@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apisix-values
+data:
+  values.yaml: |
+    gateway:
+      type: LoadBalancer
+      ingress:
+        enabled: true
+        hosts:
+          - host: apisix.127.0.0.1.nip.io
+            paths: []   
+    ingress-controller:
+      enabled: true
+      config:
+        apisix:
+          serviceNamespace: apisix-system
+    dashboard:
+      enabled: true
+    etcd:
+      replicaCount: 3
+    admin:
+      allow:
+        ipList:
+          - 0.0.0.0/0
