@@ -8,4 +8,5 @@ resources:
   - mongodb.yaml
   - petclinic.yaml
   - apisix.yaml
+  - prometheus.yaml
   # - traefik.yaml

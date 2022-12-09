@@ -1,13 +1,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: apisix
+  name: prometheus
 spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infra/apisix
+  path: ./infra/prometheus
   prune: true
   wait: true
-  timeout: 120s
