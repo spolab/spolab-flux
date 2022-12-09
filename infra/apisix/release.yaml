@@ -22,6 +22,10 @@ data:
       enabled: true
     etcd:
       replicaCount: 3
+    admin:
+      allow:
+        ipList:
+          - 0.0.0.0/0      
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
