@@ -4,7 +4,9 @@ kind: ConfigMap
 metadata:
   name: apisix-dashboard-config
 data:
-  values.yaml: ""
+  values.yaml: |
+    ingress:
+      enabled: true
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
