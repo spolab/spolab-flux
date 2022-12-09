@@ -22,6 +22,8 @@ data:
       enabled: true
     etcd:
       replicaCount: 3
+      host:
+        - http://apisix-etcd:2379      
     admin:
       allow:
         ipList:
