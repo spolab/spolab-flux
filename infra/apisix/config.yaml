@@ -20,9 +20,7 @@ data:
     dashboard:
       enabled: true
     etcd:
-      replicaCount: 3
-      host:
-        - http://apisix-etcd:2379      
+      replicaCount: 3  
     admin:
       allow:
         ipList:
