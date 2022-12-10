@@ -6,13 +6,13 @@ spec:
   releaseName: prometheus
   chart:
     spec:
-      chart: prometheus-operator
+      chart: kube-prometheus-stack
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
         name: prometheus
         namespace: flux-system
-      version: "9.3.2"
+      version: "42.2.1"
   interval: 1m
   valuesFrom:
     - kind: ConfigMap
