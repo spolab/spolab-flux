@@ -14,6 +14,10 @@ spec:
         namespace: flux-system
       version: "20.5.2"
   interval: 1m
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
   valuesFrom:
-  - kind: ConfigMap
-    name: traefik-values
+    - kind: ConfigMap
+      name: traefik-values
