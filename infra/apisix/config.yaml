@@ -14,7 +14,7 @@ data:
         hosts:
           - host: apisix.127.0.0.1.nip.io
             paths:
-              - '/*'
+              - '/'
     ingress-controller:
       enabled: true
       config:
