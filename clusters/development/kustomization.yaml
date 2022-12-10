@@ -3,10 +3,8 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - sources.yaml
-  - dapr.yaml
-  - kafka.yaml
-  - mongodb.yaml
-  - petclinic.yaml
-  - apisix.yaml
   - prometheus.yaml
-  # - traefik.yaml
+  - redis.yaml
+  - dapr.yaml
+  - traefik.yaml
+  - petclinic.yaml
