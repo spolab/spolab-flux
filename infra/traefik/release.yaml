@@ -16,17 +16,4 @@ spec:
   interval: 1m
   valuesFrom:
   - kind: ConfigMap
-    name: traefik
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: traefik
-data:
-  values.yaml: |
-    deployment:
-      podAnnotations:
-        dapr.io/enabled: "true"
-        dapr.io/app-id: traefik
-        dapr.io/app-port: "8000"
-        dapr.io/app-health-check-path: /ping
+    name: traefik-values

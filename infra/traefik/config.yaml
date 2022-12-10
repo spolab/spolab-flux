@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: traefik-values
+data:
+  values.yaml: |
+    deployment:
+      podAnnotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: traefik
+        dapr.io/app-port: "8000"
+        dapr.io/app-health-check-path: /ping
