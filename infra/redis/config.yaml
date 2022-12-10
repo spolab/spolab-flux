@@ -5,3 +5,5 @@ metadata:
 data:
   values.yaml: |
     architecture: standalone  
+    auth:
+      enabled: false
