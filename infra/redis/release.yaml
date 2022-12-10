@@ -16,12 +16,4 @@ spec:
   interval: 1m
   valuesFrom:
   - kind: ConfigMap
-    name: redis
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: redis
-data:
-  values.yaml: |
-    architecture: standalone  
+    name: redis-values

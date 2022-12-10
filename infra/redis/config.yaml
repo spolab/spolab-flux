@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-values
+data:
+  values.yaml: |
+    architecture: standalone  
