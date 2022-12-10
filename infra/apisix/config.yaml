@@ -4,6 +4,9 @@ metadata:
   name: apisix-values
 data:
   values.yaml: |
+    apisix:
+      image:
+        tag: 3.0.0-debian
     gateway:
       type: LoadBalancer
       ingress:
