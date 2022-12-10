@@ -12,5 +12,4 @@ spec:
   wait: true
   dependsOn:
     - name: traefik
-    - name: mongodb
-    - name: kafka
+    - name: redis
