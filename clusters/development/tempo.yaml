@@ -1,12 +1,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: jaeger
+  name: tempo
 spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infra/jaeger
+  path: ./infra/tempo
   prune: true
   wait: true

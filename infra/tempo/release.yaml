@@ -14,14 +14,6 @@ spec:
         namespace: flux-system
       version: "0.16.6"
   interval: 1m
-  # valuesFrom:
-  # - kind: ConfigMap
-  #   name: tempo
-# ---
-# apiVersion: v1
-# kind: ConfigMap
-# metadata:
-#   name: tempo
-# data:
-#   values.yaml: |
-#     architecture: standalone
+  valuesFrom:
+  - kind: ConfigMap
+    name: tempo-values
