@@ -3,4 +3,13 @@ kind: ConfigMap
 metadata:
   name: jaeger-values
 data:
-  values.yaml: ""
+  values.yaml: |
+    allInOne:
+      enabled: true
+    storage:
+      type: elasticsearch      
+    ingress:
+      enabled: true
+      labels:
+        hosts:
+          - jaeger.127.0.0.1.nip.io
