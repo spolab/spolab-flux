@@ -8,3 +8,4 @@ resources:
   - petclinic.yaml
   - apisix.yaml
   - prometheus.yaml
+  - jaeger.yaml
