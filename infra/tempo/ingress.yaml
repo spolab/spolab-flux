@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tempo-query
+  labels:
+    name: tempo-query
+spec:
+  rules:
+  - host: tempo.127.0.0.1.nip.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: tempo
+            port: 
+              name: tempo-query-jaeger-ui
