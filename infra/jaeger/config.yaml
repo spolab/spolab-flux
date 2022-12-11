@@ -6,8 +6,6 @@ data:
   values.yaml: |
     allInOne:
       enabled: true
-    storage:
-      type: elasticsearch      
     ingress:
       enabled: true
       labels:
