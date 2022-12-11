@@ -5,6 +5,7 @@ resources:
   - sources.yaml
   - prometheus.yaml
   - tempo.yaml
+  - grafana.yaml
   - redis.yaml
   - dapr.yaml
   - traefik.yaml
