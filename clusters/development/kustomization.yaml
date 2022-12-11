@@ -4,7 +4,7 @@ namespace: flux-system
 resources:
   - sources.yaml
   - prometheus.yaml
-  # - jaeger.yaml
+  - jaeger.yaml
   - redis.yaml
   - dapr.yaml
   - traefik.yaml
