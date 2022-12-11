@@ -3,4 +3,6 @@ kind: ConfigMap
 metadata:
   name: tempo-values
 data:
-  values.yaml: ""
+  values.yaml: |
+    tempo:
+      searchEnabled: true
