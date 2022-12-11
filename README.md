@@ -43,9 +43,20 @@ Once you are sure you are pointing at the right cluster, bootstrap Flux by issui
 flux bootstrap github --owner=spolab --repository spolab/spolab-flux --path clusters/development --personal  
 ```
 
+## Corporate environments
+
 If you want to avoid using SSH (e.g. behind a corporate firewall) add the `--token-auth` option
 
 If the corporate proxy (very likely) uses self-signed certificates, configure the certificate authority by adding `--ca-file <filename>` option.
+
+## Rancher Desktop
+
+The `clusters/development` plan installs Traefik with a Dapr sidecar. For this reason, you need to disable the vendor-provided Traefik in Rancher Desktop *and* remove the CRDs. [Rancher Desktop's documentation](https://docs.rancherdesktop.io/faq/#q-how-can-i-disable-traefik-and-will-doing-so-remove-traefik-resources) states clearly that those do not get removed automatically.
+
+For the most predictable results, we recommend that you:
+
+    a) Disable Traefik from the Kubernetes settings panel
+    b) Perform a Kubernetes reset (NOT a factory reset, that will re-enable Traefik!)
 
 # Questions, suggestions, corrections
 
