@@ -12,7 +12,7 @@ spec:
         name: grafana
         kind: HelmRepository
         namespace: flux-system
-      version: "0.16.6"
+      version: "0.16.7"
   interval: 1m
   valuesFrom:
   - kind: ConfigMap
