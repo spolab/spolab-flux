@@ -6,5 +6,5 @@ resources:
   - dapr.yaml
   - traefik.yaml
   - petclinic.yaml
-  - apisix.yaml
+  - grafana.yaml
   - prometheus.yaml
