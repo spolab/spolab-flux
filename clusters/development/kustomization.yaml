@@ -8,5 +8,6 @@ resources:
   - grafana.yaml
   - redis.yaml
   - dapr.yaml
+  - kafka.yaml
   - traefik.yaml
   - petclinic.yaml
