@@ -3,4 +3,20 @@ kind: ConfigMap
 metadata:
   name: keycloak
 data:
-  values.yaml: ""
+  values.yaml: |
+    ingress:
+      enabled: true
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
+      rules:
+        - host: keycloak.127.0.0.1.nip.io
+          paths:
+            - path: /
+              pathType: Prefix
+      console:
+        rules:
+          host: keycloak.127.0.0.1.nip.io
+          # Paths for the host
+          paths:
+            - path: /auth/admin/
+              pathType: Prefix        
