@@ -10,4 +10,3 @@ resources:
   - dapr.yaml
   - kafka.yaml
   - traefik.yaml
-  - petclinic.yaml

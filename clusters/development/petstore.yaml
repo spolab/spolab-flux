@@ -1,12 +1,18 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: petstore
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: petclinic
+  name: petstore
 spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: petclinic
+    name: petstore
   path: ./flux
   prune: true
   wait: true

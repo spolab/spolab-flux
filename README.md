@@ -25,7 +25,7 @@ This repository shows the latter model. After a lot of experimentation, this is 
 
 The folder `clusters/development` contains a `kustomization.yaml` file that defines the Kustomizations that will be loaded.
 
-You can see the dependency between deployments by looking at `petclinic.yaml`: it requires `traefik`, `mongodb` and `kafka` installed before it can start. 
+You can see the dependency between deployments by looking at `petstore.yaml`: it requires `traefik`, `mongodb` and `kafka` installed before it can start. 
 
 # Installation
 

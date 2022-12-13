@@ -5,6 +5,6 @@ resources:
   - bitnami.yaml
   - dapr.yaml
   - traefik.yaml
-  - petclinic.yaml
+  - petstore.yaml
   - grafana.yaml
   - prometheus.yaml
