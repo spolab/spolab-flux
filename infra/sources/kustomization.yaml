@@ -8,3 +8,4 @@ resources:
   - petstore.yaml
   - grafana.yaml
   - prometheus.yaml
+  - authelia.yaml

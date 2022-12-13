@@ -8,6 +8,6 @@ resources:
   - grafana.yaml
   - redis.yaml
   - dapr.yaml
-  - keycloak.yaml
+  - authelia.yaml
   - kafka.yaml
   - traefik.yaml

@@ -1,0 +1,19 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: authelia
+spec:
+  releaseName: default
+  chart:
+    spec:
+      chart: authelia
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        name: authelia
+        kind: HelmRepository
+        namespace: flux-system
+      version: "0.8.49"
+  interval: 1m
+  valuesFrom:
+  - kind: ConfigMap
+    name: authelia-values
