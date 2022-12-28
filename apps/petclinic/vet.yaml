@@ -1,0 +1,106 @@
+---
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub-owner
+spec:
+  type: pubsub.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: redis-headless.redis:6379
+  - name: consumerID
+    value: petstore-owner
+---
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: state-owner
+spec:
+  type: state.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: redis-headless.redis:6379
+  - name: actorStateStore
+    value: true
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vet-actor
+spec:
+  selector:
+    matchLabels:
+      app: vet-actor
+  template:
+    metadata:
+      labels:
+        app: vet-actor
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: vet-actor
+        dapr.io/app-port: "3000"
+        dapr.io/enable-metrics: "true"
+        dapr.io/config: "tracing"
+    spec:
+      containers:
+      - name: vet-actor
+        image: ghcr.io/spolab/petstore-vet-actor:v0.0.1
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3000
+        env:
+          - name: PUBSUB_NAME
+            value: pubsub-owner
+          - name: PUBSUB_TOPIC
+            value: owner
+          - name: STORE_NAME
+            value: state-owner
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vet-api
+spec:
+  selector:
+    matchLabels:
+      app: vet-api
+  template:
+    metadata:
+      labels:
+        app: vet-api
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: vet-api
+        dapr.io/app-port: "3000"
+        dapr.io/enable-metrics: "true"
+        dapr.io/sidecar-listen-addresses: 0.0.0.0,[::]
+        dapr.io/config: "tracing"
+    spec:
+      containers:
+      - name: vet-api
+        image: ghcr.io/spolab/petstore-vet-api:latest
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vet-api
+spec:
+  selector:
+    app: vet-api
+  ports:
+  - port: 80
+    targetPort: 3000
+    name: http

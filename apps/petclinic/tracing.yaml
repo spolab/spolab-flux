@@ -1,0 +1,11 @@
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: tracing
+spec:
+  tracing:
+    samplingRate: "1"
+    otel:
+      endpointAddress: "tempo.tempo:4318"
+      protocol: http 
+      isSecure: false

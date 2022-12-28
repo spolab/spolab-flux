@@ -6,8 +6,8 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: petclinic
-  path: ./flux
+    name: flux-system
+  path: ./apps/petclinic
   prune: true
   wait: true
   dependsOn:
