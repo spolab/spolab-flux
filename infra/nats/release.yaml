@@ -28,3 +28,4 @@ data:
       enabled: false
     jetstream:
       enabled: true
+      domain: petclinic
