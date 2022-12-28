@@ -28,12 +28,12 @@ spec:
         ports:
         - containerPort: 3000
         env:
-          - name: PUBSUB_NAME
-            value: pubsub-petclinic
-          - name: PUBSUB_TOPIC
-            value: vet
-          - name: STORE_NAME
-            value: state-petclinic
+        - name: BROKER
+          value: pubsub-petclinic
+        - name: TOPIC
+          value: vet
+        - name: STORE_NAME
+          value: state-petclinic
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -65,6 +65,14 @@ spec:
             cpu: "100m"
         ports:
         - containerPort: 3000
+        env:
+        - name: BROKER
+          value: pubsub-petclinic
+        - name: TOPIC
+          value: vet
+        - name: STORE_NAME
+          value: state-petclinic
+
 ---
 apiVersion: v1
 kind: Service

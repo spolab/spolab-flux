@@ -1,7 +1,7 @@
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
-  name: store-petclinic
+  name: state-petclinic
 spec:
   type: state.mongodb
   version: v1
