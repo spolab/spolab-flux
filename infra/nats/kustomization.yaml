@@ -3,4 +3,5 @@ kind: Kustomization
 namespace: nats
 resources:
   - namespace.yaml
+  - config.yaml
   - release.yaml

@@ -16,16 +16,4 @@ spec:
   interval: 1m
   valuesFrom:
   - kind: ConfigMap
-    name: nats
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: nats
-data:
-  values.yaml: |
-    auth:
-      enabled: false
-    jetstream:
-      enabled: true
-      domain: petclinic
+    name: nats-values

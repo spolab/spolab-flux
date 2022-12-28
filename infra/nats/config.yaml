@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nats-values
+data:
+  values.yaml: |
+    auth:
+      enabled: false
+    jetstream:
+      enabled: true
+      domain: petclinic
