@@ -4,7 +4,7 @@ namespace: flux-system
 resources:
   - sources.yaml
   - dapr.yaml
-  - traefik.yaml
+  # - traefik.yaml
   - kafka.yaml
   - mongodb.yaml
   - petclinic.yaml
