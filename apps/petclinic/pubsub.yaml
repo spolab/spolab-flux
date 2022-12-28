@@ -10,5 +10,5 @@ spec:
     value: "nats://nats.nats:4222"
   - name: natsStreamingClusterID
     value: "petclinic"
-  - name: concurrencyMode
-    value: parallel
+  - name: subscriptionType
+    value: topic
