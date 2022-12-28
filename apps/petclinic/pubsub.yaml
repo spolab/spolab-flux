@@ -1,0 +1,14 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub-petclinic
+spec:
+  type: pubsub.natsstreaming
+  version: v1
+  metadata:
+  - name: natsURL
+    value: "nats://nats.nats:4222"
+  - name: natsStreamingClusterID
+    value: "petclinic"
+  - name: concurrencyMode
+    value: parallel

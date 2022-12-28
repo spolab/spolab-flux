@@ -1,0 +1,12 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: store-petclinic
+spec:
+  type: state.mongodb
+  version: v1
+  metadata:
+  - name: host
+    value: mongodb.mongodb:27017
+  - name: actorStateStore
+    value: true

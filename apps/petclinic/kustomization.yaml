@@ -4,5 +4,7 @@ namespace: petclinic
 resources:
   - namespace.yaml
   - tracing.yaml
+  - pubsub.yaml
+  - statestore.yaml
   - vet.yaml
   - ingress.yaml
