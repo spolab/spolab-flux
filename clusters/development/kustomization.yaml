@@ -5,6 +5,7 @@ resources:
   - sources.yaml
   - dapr.yaml
   # - traefik.yaml
-  - kafka.yaml
+  # - kafka.yaml
+  - nats.yaml
   - mongodb.yaml
   - petclinic.yaml
