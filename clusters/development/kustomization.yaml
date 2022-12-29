@@ -6,6 +6,6 @@ resources:
   - dapr.yaml
   # - traefik.yaml
   # - kafka.yaml
-  - nats.yaml
+  # - nats.yaml
   - mongodb.yaml
   - petclinic.yaml

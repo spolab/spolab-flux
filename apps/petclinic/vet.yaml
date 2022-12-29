@@ -72,7 +72,6 @@ spec:
           value: vet
         - name: STORE_NAME
           value: state-petclinic
-
 ---
 apiVersion: v1
 kind: Service
