@@ -3,12 +3,8 @@ kind: Component
 metadata:
   name: pubsub-petclinic
 spec:
-  type: pubsub.natsstreaming
+  type: pubsub.jetstream
   version: v1
   metadata:
   - name: natsURL
     value: "nats://nats.nats:4222"
-  - name: natsStreamingClusterID
-    value: "petclinic"
-  - name: subscriptionType
-    value: topic
