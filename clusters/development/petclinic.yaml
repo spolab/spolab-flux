@@ -13,3 +13,4 @@ spec:
   dependsOn:
     - name: mongodb
     - name: nats
+    - name: traefik
