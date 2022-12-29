@@ -11,17 +11,17 @@ spec:
     # Routes everything starting with /v1.0 to the DAPR sidecar
     # ----------------------------------------------------------------------------------------------------
     - kind: Rule
-      match: Host(`owner.petstore.127.0.0.1.nip.io`) && PathPrefix(`/v1.0`)
+      match: Host(`vet.petstore.127.0.0.1.nip.io`) && PathPrefix(`/v1.0`)
       priority: 20
       services:
-        - name: owner-api-dapr
+        - name: vet-api-dapr
           port: dapr-http
-    # ----------------------------------------------------------------------------------------------------
-    # Catch-all rule that routes any unknown subpath to the UI. This has to be the lowest priority of all.
-    # ----------------------------------------------------------------------------------------------------
-    - kind: Rule
-      match: Host(`owner.petstore.127.0.0.1.nip.io`)
-      priority: 10
-      services:
-        - name: owner-ui
-          port: http          
+    # # ----------------------------------------------------------------------------------------------------
+    # # Catch-all rule that routes any unknown subpath to the UI. This has to be the lowest priority of all.
+    # # ----------------------------------------------------------------------------------------------------
+    # - kind: Rule
+    #   match: Host(`owner.petstore.127.0.0.1.nip.io`)
+    #   priority: 10
+    #   services:
+    #     - name: owner-ui
+    #       port: http          
