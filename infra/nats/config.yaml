@@ -4,8 +4,9 @@ metadata:
   name: nats-values
 data:
   values.yaml: |
-    auth:
-      enabled: false
-    jetstream:
-      enabled: true
-      domain: petclinic
+    nats:
+      auth:
+        enabled: false
+      jetstream:
+        enabled: true
+        domain: petclinic
