@@ -17,6 +17,7 @@ spec:
         dapr.io/enable-metrics: "true"
         dapr.io/config: "tracing"
         dapr.io/log-level: "debug"
+        dapr.io/sidecar-listen-addresses: 0.0.0.0,[::]        
     spec:
       containers:
       - name: vet-actor
