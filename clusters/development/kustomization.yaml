@@ -8,4 +8,5 @@ resources:
   # - kafka.yaml
   - nats.yaml
   - mongodb.yaml
+  - tempo.yaml
   - petclinic.yaml
