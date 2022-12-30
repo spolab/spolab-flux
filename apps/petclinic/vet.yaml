@@ -16,6 +16,7 @@ spec:
         dapr.io/app-port: "3000"
         dapr.io/enable-metrics: "true"
         dapr.io/config: "tracing"
+        dapr.io/log-level: "debug"
     spec:
       containers:
       - name: vet-actor
@@ -54,6 +55,7 @@ spec:
         dapr.io/enable-metrics: "true"
         dapr.io/sidecar-listen-addresses: 0.0.0.0,[::]
         dapr.io/config: "tracing"
+        dapr.io/log-level: "debug"
     spec:
       containers:
       - name: vet-api
