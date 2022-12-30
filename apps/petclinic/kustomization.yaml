@@ -6,5 +6,5 @@ resources:
   - tracing.yaml
   - pubsub.yaml
   - statestore.yaml
-  - vet.yaml
+  - actor.yaml
   - ingress.yaml
