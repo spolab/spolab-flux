@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: vet-actor
-        image: ghcr.io/spolab/petclinic-vet-actor:v0.0.1
+        image: ghcr.io/spolab/petclinic-vet-actor:v0.0.2
         imagePullPolicy: Always
         resources:
           limits:
