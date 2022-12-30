@@ -5,5 +5,5 @@ resources:
   - bitnami.yaml
   - dapr.yaml
   - traefik.yaml
-  - petclinic.yaml
   - nats.yaml
+  - grafana.yaml
