@@ -12,7 +12,7 @@ spec:
         app: vet-actor
       annotations:
         dapr.io/enabled: "true"
-        dapr.io/app-id: vet-actor
+        dapr.io/app-id: petclinic-actor
         dapr.io/app-port: "3000"
         dapr.io/enable-metrics: "true"
         dapr.io/config: "tracing"
@@ -25,8 +25,8 @@ spec:
         imagePullPolicy: Always
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "100m"
+            memory: "256Mi"
+            cpu: "200m"
         ports:
         - containerPort: 3000
         env:
