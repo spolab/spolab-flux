@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vet-actor
+  name: actor-server
 spec:
   selector:
     matchLabels:
-      app: vet-actor
+      app: actor-server
   template:
     metadata:
       labels:
-        app: vet-actor
+        app: actor-server
       annotations:
         dapr.io/enabled: "true"
         dapr.io/app-id: petclinic-actor
@@ -20,7 +20,7 @@ spec:
         dapr.io/sidecar-listen-addresses: 0.0.0.0,[::]        
     spec:
       containers:
-      - name: actor
+      - name: actor-server
         image: ghcr.io/spolab/petclinic-actor:latest@sha256:84fd3c112f41e01facf2f758230e5a7a7ae7162f8a7de68d74d2cc3321addf72
         imagePullPolicy: Always
         resources:
