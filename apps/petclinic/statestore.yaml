@@ -7,6 +7,6 @@ spec:
   version: v1
   metadata:
   - name: host
-    value: mongodb.mongodb:27017
+    value: mongodb-headless.mongodb:27017
   - name: actorStateStore
     value: true
