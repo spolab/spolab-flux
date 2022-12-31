@@ -24,6 +24,7 @@ metadata:
   name: mongodb
 data:
   values.yaml: |
+    architecture: replicaset
     replica:
       replicaCount: 0
     auth:
