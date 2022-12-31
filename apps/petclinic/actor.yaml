@@ -20,7 +20,7 @@ spec:
         dapr.io/sidecar-listen-addresses: 0.0.0.0,[::]        
     spec:
       containers:
-      - name: vet-actor
+      - name: actor
         image: ghcr.io/spolab/petclinic-actor:latest@sha256:84fd3c112f41e01facf2f758230e5a7a7ae7162f8a7de68d74d2cc3321addf72
         imagePullPolicy: Always
         resources:
@@ -36,3 +36,9 @@ spec:
           value: vet
         - name: STORE_NAME
           value: state-petclinic
+      initContainers:
+      - name: actor-init
+        image: ghcr.io/spolab/petclinic-actor-init:latest@sha256:4bf2a30eca5d164b92f1864796781a0b4c43139efc78f7b54052122242d752b7
+        env:
+          - name: NATS_ADDR
+            value: nats.nats:4222
