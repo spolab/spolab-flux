@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: actor-server
-        image: ghcr.io/spolab/petclinic-actor:latest@sha256:c6831e75379f540ad40ccac47482bb0554a648c80f3cf5ae5a8c4059833887d6
+        image: ghcr.io/spolab/petclinic-actor:latest@sha256:be59e9735c9c5fae8143243db5dd65bc242889d356217a6dd554bf68d0f091a0
         imagePullPolicy: Always
         resources:
           limits:
