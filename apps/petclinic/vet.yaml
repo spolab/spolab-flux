@@ -1,0 +1,49 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vet-api
+spec:
+  selector:
+    matchLabels:
+      app: vet-api
+  template:
+    metadata:
+      labels:
+        app: vet-api
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: petclinic-vet
+        dapr.io/app-port: "3000"
+        dapr.io/enable-metrics: "true"
+        dapr.io/config: "tracing"
+        dapr.io/log-level: "debug"
+    spec:
+      containers:
+      - name: vet-api
+        image: ghcr.io/spolab/petclinic-vet-api:latest@sha256:fef570889087f156c2a5e773e0305425197c5699d204577a4465eedcde303be5
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 3000
+        env:
+        - name: BROKER
+          value: pubsub-petclinic
+        - name: TOPIC
+          value: vet
+        - name: STORE_NAME
+          value: state-petclinic
+---
+apiVersion: dapr.io/v1alpha1
+kind: Subscription
+metadata:
+  name: vet-cache
+spec:
+  topic: vet
+  route: /onevent
+  pubsubname: pubsub-petclinic
+scopes:
+- petclinic-vet
