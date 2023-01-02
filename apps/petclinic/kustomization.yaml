@@ -7,4 +7,5 @@ resources:
   - pubsub.yaml
   - statestore.yaml
   - actor.yaml
+  - vet.yaml
   - ingress.yaml
