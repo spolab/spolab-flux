@@ -1,3 +1,15 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: state-vet
+spec:
+  type: state.mongodb
+  version: v1
+  metadata:
+  - name: host
+    value: mongodb-headless.mongodb:27017
+  - name: collectionName
+    value: vets
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -35,7 +47,7 @@ spec:
         - name: TOPIC
           value: vet
         - name: STORE_NAME
-          value: state-petclinic
+          value: state-vet
 ---
 apiVersion: dapr.io/v1alpha1
 kind: Subscription

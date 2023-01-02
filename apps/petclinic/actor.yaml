@@ -1,3 +1,17 @@
+---
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: state-actor
+spec:
+  type: state.mongodb
+  version: v1
+  metadata:
+  - name: host
+    value: mongodb-headless.mongodb:27017
+  - name: actorStateStore
+    value: true
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -35,7 +49,7 @@ spec:
         - name: TOPIC
           value: vet
         - name: STORE_NAME
-          value: state-petclinic
+          value: state-actor
       initContainers:
       - name: actor-init
         image: ghcr.io/spolab/petclinic-actor-init:latest@sha256:4bf2a30eca5d164b92f1864796781a0b4c43139efc78f7b54052122242d752b7
