@@ -59,3 +59,33 @@ spec:
   pubsubname: pubsub-petclinic
 scopes:
 - petclinic-vet
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vet-api
+spec:
+  selector:
+    app: vet-api
+  ports:
+  - port: 80
+    targetPort: 3000
+    name: http
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vet-api
+  labels:
+    name: vet-api
+spec:
+  rules:
+  - host: vet.petclinic.127.0.0.1.nip.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: http
