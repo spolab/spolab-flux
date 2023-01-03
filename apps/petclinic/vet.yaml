@@ -79,6 +79,8 @@ metadata:
   name: vet-api
   labels:
     name: vet-api
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
 spec:
   rules:
   - host: vet.petclinic.127.0.0.1.nip.io
