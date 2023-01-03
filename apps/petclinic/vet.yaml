@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: vet-api
-        image: ghcr.io/spolab/petclinic-vet-api:latest@sha256:556e6bbcdf78f26b9a3eb5fcc624504bbbfe7fef1e18ccc966f90c17a5e1c748
+        image: ghcr.io/spolab/petclinic-vet-api:latest@sha256:156f213b6244f5cc8e9a734b1be8df5b4ef1ee5c2523275d019197079f58b3ef
         imagePullPolicy: Always
         resources:
           limits:
@@ -46,7 +46,7 @@ spec:
           value: pubsub-petclinic
         - name: TOPIC
           value: vet
-        - name: STORE_NAME
+        - name: STORE
           value: state-vet
 ---
 apiVersion: dapr.io/v1alpha1
