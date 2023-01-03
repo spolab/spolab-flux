@@ -90,4 +90,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: http
+            name: vet-api
+            port:
+              name: http
