@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: vet-api
-        image: ghcr.io/spolab/petclinic-vet-api:latest@sha256:156f213b6244f5cc8e9a734b1be8df5b4ef1ee5c2523275d019197079f58b3ef
+        image: ghcr.io/spolab/petclinic-vet-api:latest@sha256:c9355429181cb0333d8a59fe87251b273c79c27536e052d0dbc7a81772ea0253
         imagePullPolicy: Always
         resources:
           limits:
