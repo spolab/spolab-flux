@@ -71,25 +71,3 @@ spec:
   - port: 80
     targetPort: 3000
     name: http
-
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: vet-api
-  labels:
-    name: vet-api
-  annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
-spec:
-  rules:
-  - host: vet.petclinic.127.0.0.1.nip.io
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: vet-api
-            port:
-              name: http

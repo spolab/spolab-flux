@@ -17,4 +17,4 @@ spec:
           service:
             name: vet-api
             port: 
-              number: 80
+              name: http
