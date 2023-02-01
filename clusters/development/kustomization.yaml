@@ -9,4 +9,3 @@ resources:
   - nats.yaml
   - mongodb.yaml
   - tempo.yaml
-  - petclinic.yaml
